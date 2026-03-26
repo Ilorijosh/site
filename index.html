@@ -449,8 +449,12 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <div class="nav-logo">
-    <a href="#home" onclick="closeMenu()">
+    <a href="#home" onclick="closeMenu()" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
       <img src="logo.jpg" alt="itwoj Realty Ltd" onerror="this.style.display='none'">
+      <div style="display:flex;flex-direction:column;">
+        <span style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:#B01030;line-height:1;">ITWOJ REALTY</span>
+        <span style="font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:2px;color:#6B6462;text-transform:uppercase;">Dream | Build</span>
+      </div>
     </a>
   </div>
   <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -586,20 +590,24 @@
         </div>
 
         <!-- Credentials -->
-        <div class="credentials-row" style="margin-top: 24px;">
-          <div class="cred-badge">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/CAC_Nigeria_Logo.png/200px-CAC_Nigeria_Logo.png" alt="CAC" onerror="this.style.display='none'">
-            <div style="width:36px;height:36px;background:#006400;border-radius:4px;display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:12px;flex-shrink:0;" class="cac-fallback">CAC</div>
-            <div class="cred-badge-text">
-              <div class="cred-badge-title">CAC Registered</div>
-              <div class="cred-badge-sub">Corporate Affairs Commission</div>
+        <div style="margin-top:32px;">
+          <div style="font-size:10px;letter-spacing:3px;color:#9e9896;text-transform:uppercase;margin-bottom:16px;">Backed & Certified By</div>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:16px;background:white;border:2px solid rgba(0,100,0,0.15);padding:16px 24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:200px;">
+              <img src="cac_logo.jpg" alt="CAC" style="height:60px;width:60px;object-fit:contain;flex-shrink:0;">
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#006400;letter-spacing:0.5px;">CAC Registered</div>
+                <div style="font-size:11px;color:#6B6462;margin-top:2px;">Corporate Affairs Commission</div>
+                <div style="font-size:10px;color:#B01030;font-weight:600;margin-top:2px;">RC No: 9038787</div>
+              </div>
             </div>
-          </div>
-          <div class="cred-badge">
-            <img src="scuml_logo.jpg" alt="SCUML" style="height:36px;width:auto;" onerror="this.style.display='none'">
-            <div class="cred-badge-text">
-              <div class="cred-badge-title">SCUML Compliant</div>
-              <div class="cred-badge-sub">Powered by EFCC</div>
+            <div style="display:flex;align-items:center;gap:16px;background:white;border:2px solid rgba(176,16,48,0.15);padding:16px 24px;box-shadow:0 4px 20px rgba(0,0,0,0.08);min-width:200px;">
+              <img src="scuml_logo.jpg" alt="SCUML" style="height:60px;width:auto;max-width:80px;object-fit:contain;flex-shrink:0;">
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#B01030;letter-spacing:0.5px;">SCUML Compliant</div>
+                <div style="font-size:11px;color:#6B6462;margin-top:2px;">Special Control Unit Against</div>
+                <div style="font-size:11px;color:#6B6462;">Money Laundering · EFCC</div>
+              </div>
             </div>
           </div>
         </div>
@@ -791,13 +799,13 @@
       </div>
     </div>
     <div class="video-grid fade-up">
-      <div class="video-card main">
-        <div class="video-thumb"><div class="video-play">▶</div></div>
+      <div class="video-card main" onclick="window.open('https://youtube.com/shorts/SBsITRsqFd0','_blank')">
+        <div class="video-thumb" style="background:linear-gradient(135deg,rgba(0,100,0,0.7),rgba(26,26,26,0.85)),url('ibile_1.jpg') center/cover no-repeat;"><div class="video-play">▶</div></div>
         <div class="video-info"><div class="video-title">Ibile Farm City — Site Tour</div><div class="video-sub">Ibara, Abeokuta · From ₦500K</div></div>
       </div>
-      <div class="video-card">
-        <div class="video-thumb" style="background: linear-gradient(135deg, rgba(176,16,48,0.6), rgba(26,26,26,0.8)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80') center/cover no-repeat;"><div class="video-play">▶</div></div>
-        <div class="video-info"><div class="video-title">Why Ibeju Lekki?</div><div class="video-sub">Market Overview</div></div>
+      <div class="video-card" onclick="window.open('https://youtu.be/GCJYa113ymo','_blank')">
+        <div class="video-thumb" style="background:linear-gradient(135deg,rgba(176,16,48,0.6),rgba(26,26,26,0.8)),url('ambiance_1.jpg') center/cover no-repeat;"><div class="video-play">▶</div></div>
+        <div class="video-info"><div class="video-title">Ambiance II — Project Update</div><div class="video-sub">Sangotedo, Lagos · ₦135M</div></div>
       </div>
       <div class="video-card">
         <div class="video-thumb" style="background: linear-gradient(135deg, rgba(176,16,48,0.6), rgba(26,26,26,0.8)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80') center/cover no-repeat;"><div class="video-play">▶</div></div>
@@ -955,7 +963,26 @@
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-inner">
+    <!-- Credentials bar -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:32px;padding:28px 0;border-bottom:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;">
+      <div style="font-size:9px;letter-spacing:3px;color:rgba(255,255,255,0.3);text-transform:uppercase;">Certified & Compliant</div>
+      <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);padding:12px 20px;border:1px solid rgba(0,100,0,0.3);">
+        <img src="cac_logo.jpg" alt="CAC" style="height:40px;width:40px;object-fit:contain;">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:white;">CAC Registered</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:1px;">RC No: 9038787</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;background:rgba(255,255,255,0.05);padding:12px 20px;border:1px solid rgba(176,16,48,0.3);">
+        <img src="scuml_logo.jpg" alt="SCUML" style="height:40px;width:auto;max-width:60px;object-fit:contain;">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:white;">SCUML Compliant</div>
+          <div style="font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:1px;">Powered by EFCC</div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer bottom -->
+    <div class="footer-inner" style="padding-top:24px;">
       <div class="footer-logo"><img src="logo.jpg" alt="itwoj Realty" onerror="this.style.display='none'"></div>
       <div class="footer-tagline">Dream | Build</div>
       <div class="footer-copy">© 2025 itwoj Realty Ltd. RC No: 9038787<br>Eleko, Ibeju Lekki, Lagos, Nigeria.</div>
